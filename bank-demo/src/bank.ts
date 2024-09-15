@@ -9,7 +9,6 @@ interface BankAccount {
 /**
  * This class represents a simple bank with the ability to create new accounts
  */
-
 export default class Bank {
     // Array to store all bank accounts in the bank
     private accounts: BankAccount [] = [];
@@ -45,5 +44,19 @@ export default class Bank {
         this.accounts.push(account);
 
         return account;
+    }
+
+    /**
+     * deposits money into an existing account
+     * @param {string} accountNumber -- account number of customer
+     * @param {number} amount -- amount to be deposited into the account
+     */
+    public deposit(accountNumber: string, amount: number): void {
+        const account = this.findAccount(accountNumber);
+
+        if (!account) {
+            throw new Error('Account not found');
+        }
+        account.balance += amount;
     }
 }
