@@ -39,6 +39,36 @@ try {
     bank.deposit('78900', 50);
     console.log('Scenario 2 failed');
 }
-catch {
+catch(_) {
     console.log('Scenario 2 passed');
 }
+
+// Withdraw money from an account
+
+//scenario 1
+bank.withdraw('123456', 50);
+
+if (acc.balance >= 50) {
+    console.log('Scenario 1 passed');
+} else {
+    console.log('Scenario 1 failed');
+}
+
+//scenario 2
+try {
+    bank.withdraw('123456', 200);
+    console.log('Scenario 2 failed');
+}
+catch(_) {
+    console.log('Scenario 2 passed');
+}
+
+//scenario 3
+try {
+    bank.withdraw('789000', 50);
+    console.log('Scenario 3 failed');
+}
+catch(_) {
+    console.log('Scenario 3 passed');
+}
+
