@@ -23,7 +23,7 @@ export default class Bank {
     }
 
     /**
-     * creates a new account with a unique account number
+     * This method creates a new account with a unique account number
      * @param {string} name -- name of the customer
      * @param age -- age of the customer
      * @param accountNumber -- account number of the customer
@@ -47,7 +47,7 @@ export default class Bank {
     }
 
     /**
-     * deposits money into an existing account
+     * This method deposits money into an existing account
      * @param {string} accountNumber -- account number of customer
      * @param {number} amount -- amount to be deposited into the account
      */
@@ -61,7 +61,7 @@ export default class Bank {
     }
 
     /**
-     * withdraws money from an existing account
+     * This method withdraws money from an existing account
      * @param {string} accountNumber -- account number of customer
      * @param {number} amount -- amount to be withdrawn from the account
      */
