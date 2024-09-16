@@ -72,3 +72,25 @@ catch(_) {
     console.log('Scenario 3 passed');
 }
 
+// check balance of an account
+
+// scenario 1 - successful balance check
+
+const balance = bank.checkBalance('123456');
+
+if (balance === 50) {
+    console.log('Scenario 1 passed');
+} else {
+    console.log('Scenario 1 failed');
+}
+
+// scenario 2 - failed balance check
+
+try {
+    bank.checkBalance('789000');
+    console.log('Scenario 2 failed');
+}
+catch(_) {
+    console.log('Scenario 2 passed');
+}
+

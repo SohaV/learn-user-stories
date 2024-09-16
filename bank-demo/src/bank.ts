@@ -78,4 +78,19 @@ export default class Bank {
 
         account.balance -= amount;
     }
+
+    /**
+     * This methods checks the current balance of the account
+     * @param {string} accountNumber -- account number of the customer
+     * @returns {number} balance -- current balance of the account
+     */
+    public checkBalance(accountNumber: string): number {
+        const account = this.findAccount(accountNumber);
+
+        if(!account) {
+            throw new Error('Account not found');
+        }
+
+        return account.balance;
+    }
 }
